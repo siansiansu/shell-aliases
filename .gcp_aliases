@@ -1,15 +1,15 @@
 gcpAddrList() {
-    gcloud compute addresses list --project="$proj"
+    gcloud compute addresses list --project="$1"
 }
 
 gcpComputeList() {
-    gcloud compute instances list --project="$proj"
+    gcloud compute instances list --project="$1"
 }
 
 gcpRouteList() {
-    gcloud compute routes list --project="$proj"
+    gcloud compute routes list --project="$1"
 }
 
 gcpContainerList() {
-    gcloud container clusters list --project="$proj"
+    gcloud container clusters list --project="$1"
 }
