@@ -1,0 +1,10 @@
+function fetch-upstream() {
+  local default_br=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')
+  git fetch upstream
+  git rebase upstream/"$default_br"
+  git push origin "$default_br"
+}
+
+back() {
+  git reset HEAD~
+}
